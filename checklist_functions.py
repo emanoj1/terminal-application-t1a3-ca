@@ -39,7 +39,6 @@ def remove_checklist(file_name):
         writer.writerows(checklist_items)
 
 def mark_checklist(file_name):
-    # Ask title for the Add Checklist option
     checklist_name = input("Which item do you want to mark as packed?: ")
     checklist_items = []
     with open(file_name, "r") as f:

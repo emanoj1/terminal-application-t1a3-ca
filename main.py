@@ -1,3 +1,4 @@
+from colored import fg, attr, bg
 from checklist_functions import add_checklist, view_checklist, remove_checklist, mark_checklist
 
 file_name = "travel-checklist.csv"
@@ -6,7 +7,6 @@ try:
     # Open file in Read mode
     todo_file = open(file_name, "r")
     todo_file.close()
-    print("In try block")
     # if error, file doesn't exist (go to Except block)
     # if no error, file exists
 except FileNotFoundError:
@@ -14,10 +14,9 @@ except FileNotFoundError:
     todo_file = open(file_name, "w")
     todo_file.write("ITEM,COMPLETED")
     todo_file.close()
-    print("In except block")
 
 #Welcome message
-print("\nWelcome to your Travel Checklist!")
+print(f"\n{fg('black')}{bg('blue')}Welcome to your Travel Checklist!{attr('reset')}")
 print("Keep a track of what to take and don't miss a thing!!")
 print("Let's get started...")
 
@@ -50,5 +49,5 @@ while user_choice_menu != "5":
     else:
         print("\nInvalid input - Choose a number between 1-5 only.")
 
-print("Thank you for using Travel Checklist! Bon Voyage!")
+print(f"{fg('black')}{bg('blue')} Thank you for using Travel Checklist! Bon Voyage!{attr('reset')}")
 print("\n")
