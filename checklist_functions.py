@@ -26,7 +26,17 @@ def view_checklist(file_name):
 
 def remove_checklist(file_name):
     # Ask title for the Add Checklist option
-    checklist_name = input("Remove the items you longer need to carry: ")
+    checklist_name = input("Remove the item you want to remove: ")
+    # Copy into a new CSV file after checking if its in the original list, else don't copy
+    checklist_items = []
+    with open(file_name, "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if (checklist_name != row[0]):
+                checklist_items.append(row)
+    with open(file_name, "w") as f:
+        writer = csv.writer(f)
+        writer.writerows(checklist_items)
 
 def mark_checklist(file_name):
     # Ask title for the Add Checklist option

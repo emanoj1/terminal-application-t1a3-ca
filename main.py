@@ -23,11 +23,11 @@ print("Let's get started...")
 
 #Set and Display Menu items to user
 def create_menu_list():
-    print("\n1. Add item - Enter 1")
-    print("2. View item - Enter 2")
-    print("3. Remove item - Enter 3")
-    print("4. Mark item - Enter 4")
-    print("5. Exit - Enter 5")
+    print("\n1. Add a new item - Enter 1")
+    print("2. View added items - Enter 2")
+    print("3. Remove items - Enter 3")
+    print("4. Mark item as packed - Enter 4")
+    print("5. Exit the menu - Enter 5")
     menu_choice = input("\nEnter your selection: ") #menu_choice is a local variable
     return(menu_choice)
 
