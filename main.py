@@ -12,7 +12,7 @@ try:
 except FileNotFoundError:
     # Since file doesn't exist, create the file and insert the first line into the file
     todo_file = open(file_name, "w")
-    todo_file.write("title,completed\n")
+    todo_file.write("ITEM,COMPLETED")
     todo_file.close()
     print("In except block")
 
