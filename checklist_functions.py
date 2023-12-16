@@ -40,5 +40,17 @@ def remove_checklist(file_name):
 
 def mark_checklist(file_name):
     # Ask title for the Add Checklist option
-    checklist_name = input("If packed, mark the items as complete: ")
+    checklist_name = input("Which item do you want to mark as packed?: ")
+    checklist_items = []
+    with open(file_name, "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if(checklist_name != row[0]):
+                checklist_items.append(row)
+            else:
+                checklist_items.append([row[0], "True"])
+    with open(file_name, "w") as f:
+        writer  = csv.writer(f)
+        writer.writerows(checklist_items)
+    print("\nDone! Your chosen item is packed!")
 
