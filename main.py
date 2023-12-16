@@ -1,5 +1,21 @@
 from checklist_functions import add_checklist, view_checklist, remove_checklist, mark_checklist
 
+file_name = "travel-checklist.csv"
+
+try:
+    # Open file in Read mode
+    todo_file = open(file_name, "r")
+    todo_file.close()
+    print("In try block")
+    # if error, file doesn't exist (go to Except block)
+    # if no error, file exists
+except FileNotFoundError:
+    # Since file doesn't exist, create the file and insert the first line into the file
+    todo_file = open(file_name, "w")
+    todo_file.write("title,completed\n")
+    todo_file.close()
+    print("In except block")
+
 #Welcome message
 print("\nWelcome to your Travel Checklist!")
 print("Keep a track of what to take and don't miss a thing!!")
@@ -22,16 +38,17 @@ user_choice_menu = ""
 while user_choice_menu != "5":
     user_choice_menu = create_menu_list()
     if (user_choice_menu == "1"):
-        add_checklist()
+        add_checklist(file_name)
     elif (user_choice_menu == "2"):
-        view_checklist()
+        view_checklist(file_name)
     elif (user_choice_menu == "3"):
-        remove_checklist()
+        remove_checklist(file_name)
     elif (user_choice_menu == "4"):
-        mark_checklist()
+        mark_checklist(file_name)
     elif (user_choice_menu == "5"):
         continue # will skip next line and continue with the loop
     else:
         print("\nInvalid input - Choose a number between 1-5 only.")
 
 print("Thank you for using Travel Checklist! Bon Voyage!")
+print("\n")
