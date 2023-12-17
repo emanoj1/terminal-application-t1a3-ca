@@ -13,7 +13,7 @@ def add_checklist(file_name):
         writer.writerow([checklist_name, "False"])
 
 def view_checklist(file_name):
-    # Ask title for the Add Checklist option
+    # Ask title for the VIEW Checklist option
     print("\nThese are the items to carry on your trip:\n ")
     with open(file_name, "r") as f:
         reader = csv.reader(f)
@@ -25,7 +25,7 @@ def view_checklist(file_name):
                 print(f">>> {row[0]} : Yet to pack.") # display message if NOT packed
 
 def remove_checklist(file_name):
-    # Ask title for the Add Checklist option
+    # Ask title for the REMOVE Checklist option
     checklist_name = input("Remove the item you want to remove: ")
     # Copy into a new CSV file after checking if its in the original list, else don't copy
     checklist_items = []
