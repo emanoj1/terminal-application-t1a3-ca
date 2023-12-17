@@ -17,7 +17,7 @@ except FileNotFoundError:
 
 #Welcome message
 print(f"\n{fg('black')}{bg('blue')}Welcome to your Travel Checklist!{attr('reset')}")
-print("Keep a track of what to take and don't miss a thing!!")
+print("Keep a track of what to carry and don't miss a thing!!")
 print("Let's get started...")
 
 #Set and Display Menu items to user
@@ -47,7 +47,7 @@ while user_choice_menu != "5":
     elif (user_choice_menu == "5"):
         continue # will skip next line and continue with the loop
     else:
-        print("\nInvalid input - Choose a number between 1-5 only.")
+        print("\n\033[1mInvalid input - Choose a number between 1-5 only.\033[0m")
 
 print(f"{fg('black')}{bg('blue')} Thank you for using Travel Checklist! Bon Voyage!{attr('reset')}")
 print("\n")
