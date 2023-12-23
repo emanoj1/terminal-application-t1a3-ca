@@ -37,6 +37,7 @@ def remove_checklist(file_name):
     with open(file_name, "w") as f:
         writer = csv.writer(f)
         writer.writerows(checklist_items)
+    print("\nDone! That item was removed!")
 
 def mark_checklist(file_name):
     checklist_name = input("Which item do you want to mark as packed?: ")
