@@ -26,7 +26,7 @@ def view_checklist(file_name):
 
 def remove_checklist(file_name):
     # Ask title for the REMOVE Checklist option
-    checklist_name = input("Remove the item you want to remove: ")
+    checklist_name = input("Remove the item you don't need anymore: ")
     # Copy into a new CSV file after checking if its in the original list, else don't copy
     checklist_items = []
     with open(file_name, "r") as f:
