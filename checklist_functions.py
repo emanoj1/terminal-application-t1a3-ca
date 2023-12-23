@@ -11,6 +11,7 @@ def add_checklist(file_name):
     # Insert values - titl = user entered
                     # - Completed = False
         writer.writerow([checklist_name, "False"])
+    print("\nDone! Your item is in the travelist!")
 
 def view_checklist(file_name):
     # Ask title for the VIEW Checklist option
