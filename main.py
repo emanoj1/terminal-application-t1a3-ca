@@ -16,8 +16,8 @@ except FileNotFoundError:
     todo_file.close()
 
 #Welcome message
-print(f"\n{fg('black')}{bg('blue')}Welcome to your Travel Checklist!{attr('reset')}")
-print("Keep a track of what to carry and don't miss a thing!!")
+print(f"\n{fg('black')}{bg('blue')}Welcome to TRAVELIST - your travel Checklist companion!{attr('reset')}")
+print("Keep a track of items to carry and don't miss a thing!!")
 print("Let's get started...")
 
 #Set and Display Menu items to user
@@ -49,5 +49,5 @@ while user_choice_menu != "5":
     else:
         print("\n\033[1mInvalid input - Choose a number between 1-5 only.\033[0m")
 
-print(f"{fg('black')}{bg('blue')} Thank you for using Travel Checklist! Bon Voyage!{attr('reset')}")
+print(f"{fg('black')}{bg('blue')} Thank you for using Travelist! Bon Voyage!{attr('reset')}")
 print("\n")
