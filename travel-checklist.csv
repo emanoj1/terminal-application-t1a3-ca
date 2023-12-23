@@ -3,5 +3,5 @@ umbrella,True
 charger,True
 vitamins,True
 laptop,True
-laptop charger,False
-apple airtag,False
+laptop charger,True
+speaker,True
