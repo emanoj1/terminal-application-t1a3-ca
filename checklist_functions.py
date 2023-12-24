@@ -21,14 +21,13 @@ def view_checklist(file_name):
         reader = csv.reader(f)
         reader.__next__() # to skip the header row in the CSV file
         for row in reader:
+            items_exist = True # Change to True if atleast 1 item present
             if (row[1] == "True"):
                 print(f"> {row[0]} packed!") # display message if packed
-                items_exist = True # Change to True if atleast 1 item present
             else:
-                print(f">>> {row[0]} : Yet to pack.") # display message if NOT packed
+                print(f">>> {row[0]} : Yet to pack.") # display message if NOT packed                
     if not items_exist:
-        print("oops!")
-        print("Your checklist is empty as you've not added anything yet. Choose Option 1 in Menu to start adding!")
+        print("OOPS! Your checklist is empty as you've not added anything yet. Choose Option 1 in Menu to start adding!")
 
 def remove_checklist(file_name):
     checklist_name = input("Enter the item name you don't need anymore: ") # Ask title for the REMOVE Checklist option
